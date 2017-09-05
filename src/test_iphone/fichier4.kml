@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Folder>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<Style id="style4">
+<Icon>
+    <href>http://maps.google.com/mapfiles/kml/paddle/4_maps.png</href>
+ </Icon>
+</Style>
+<Point>
+<coordinates>0.000000,0.000000,0</coordinates>
+</Point>
+</Placemark>
+</Folder>
+</kml>
