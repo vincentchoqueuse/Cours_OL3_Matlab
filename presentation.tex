@@ -1,0 +1,355 @@
+\documentclass[10pt,ignorenonframetext,t]{beamer}
+ \usepackage{multimedia}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+  \usepackage[T1]{fontenc}
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{etex}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{fourier}
+\usepackage[official]{eurosym}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\pgfplotsset{ylabel near ticks,every tick label/.append style={font=\tiny}}
+\title{Présentation de Matlab}
+\subtitle{Module Outils Logiciels (OL3)}
+\author{V. Choqueuse}
+\institute[Matlab]{\includegraphics[height=0.15\linewidth]{img/matlab.jpg}}
+
+
+\usetikzlibrary{positioning}
+\date{}
+
+\definecolor{monvert}{rgb}{0.2,0.6,0.09}
+\definecolor{monbleu}{RGB}{174,174,223}
+\setbeamercolor{page number in head/foot}{fg=monbleu}
+
+\lstset{ language=Python,stringstyle=\ttfamily\color{red!50!brown},keywordstyle=\usebeamercolor[fg]{structure}\bfseries,frame=none,belowcaptionskip=1em,basicstyle=\scriptsize,commentstyle=\color{monvert}\ttfamily,}
+
+
+\defbeamertemplate{footline}{centered page number}
+{\vskip -3em   \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  { \hspace{2em} Slide \insertframenumber / \inserttotalframenumber}: \insertsection  \hspace*{\fill} \vskip3pt
+}
+\setbeamertemplate{footline}[centered page number]
+
+
+
+
+\begin{document}
+\frame{\titlepage}
+
+
+\frame{\frametitle{Table des matières}\tableofcontents} 
+
+\section{Module OL3}
+\subsection{Description}
+
+\begin{frame}{\insertsection}
+\begin{block}{Objectifs}
+\begin{itemize}
+\item Permettre à l'étudiant de maitriser des éléments du traitement du signal (Développement en série de Fourier, transformation en Z...) pour le réinvestir dans les disciplines techniques du GEII, à travers la pratique d'outils logiciels de différentes natures (logiciel de calcul formel, tableur, logiciel de simulation...
+\item Appliquer les fonctions de plusieurs variables au calcul d'incertitude.
+\end{itemize}
+\end{block}
+
+\begin{block}{Modalités de mise en \oe uvre}
+On utilisera des logiciels pour limiter les calculs très techniques de transformées afin de se concentrer sur la mise en place de raisonnements et l?interprétation des résultats.
+\end{block}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{1.0\textwidth}
+\centering
+\includegraphics[height=0.18\linewidth]{img/matlab_ex1.png}
+\includegraphics[height=0.18\linewidth]{img/matlab_ex2.png}
+\includegraphics[height=0.18\linewidth]{img/matlab_ex3.png}
+\includegraphics[height=0.18\linewidth]{img/matlab_ex4.jpg}
+\end{minipage}
+\end{figure}
+\end{frame}
+
+\subsection{Travaux Pratiques}
+\begin{frame}{\insertsection}
+\begin{block}{Informations Générales concernant les TPs}
+\begin{itemize}
+\item Equipe Pédagogique: Mourrain, Leroy, Laurent \& Choqueuse.
+\item Volume Horaire: TP=$15$H ($5\times 3$H)
+\item Evaluation: Quizz de 15 minutes à la fin de chaque TP.
+\item Travail préparatoire: {\color{red}\danger}.
+\end{itemize}
+\end{block}
+
+\begin{block}{Contenu des TPs}
+\begin{itemize}
+\item TP1: Automatique,
+\item TP2: Systèmes Linéaires et Invariants dans le Temps,
+\item TP3: Analyse Spectrale (Fourier, DFT, Spectrogramme),
+\item TP4: Echantillonnage (CAN/CNA),
+\item TP5: Filtrage numérique (Filtre RIF et RII).
+\end{itemize}
+\end{block}
+
+\begin{block}{
+Les TPs seront réalisés sur .... Matlab !}
+\end{block}
+
+\end{frame}
+
+\section{Introduction à Matlab}
+\begin{frame}{\insertsection}
+\begin{block}{En bref}
+\begin{minipage}{0.575\textwidth}
+
+\begin{itemize}
+\item \textbf{MATLAB}: Matrix Laboratory.
+\item Développeur: Société Mathworks 
+\begin{itemize}
+\item Siège: Natick, Massachusetts, US.
+\item Chiffre d'Affaire: 850 millions $\$$ (Données 2016),
+\item Employés: 3600 personnes.
+\end{itemize}
+
+\item Fonctionnalités:
+\begin{itemize}
+\item Environnement de Développement propre,
+\item Langage de script propre intégrant plusieurs centaines de fonctions scientifiques et techniques extensibles via l'ajout de \textbf{Toolbox}.
+\item Interface de programmation graphique (\textbf{simulink}),
+\item Outils de conception d'interfaces.
+\end{itemize}
+\item OS: Windows, Mac OS, Linux, Unix.
+
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.375\textwidth}
+\begin{figure}
+\centering
+\includegraphics[height=0.6\linewidth]{img/matlab.jpg}
+\caption{Logo Matlab}
+\end{figure}
+\vskip -2em
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{img/location.png}
+\caption{Localisation du siège de Mathworks.}
+\end{figure}
+\end{minipage}
+\end{block}
+\end{frame}
+
+
+\subsection{Utilisateurs de Matlab}
+
+\begin{frame}{\insertsection}
+\begin{block}{\insertsubsection}
+\begin{itemize}
+\item Services R\&D des Petites, Moyennes et Grandes Entreprises. Actuellement, 275 offres APEC fléchées \href{https://cadres.apec.fr/home/mes-offres/recherche-des-offres-demploi/liste-des-offres-demploi.html?sortsType=SCORE&sortsDirection=DESCENDING&nbParPage=20&typeAffichage=detaille&page=0&distance=0&motsCles=MATLAB}{MATLAB} pour les sociétés suivantes...
+\begin{itemize}
+\item Airbus,
+\item Alstom,
+\item Bouygues,
+\item CEA,
+\item General Electric,
+\item Institut Pasteur,
+\item Mitsubishi,
+\item Naval Group,
+\item Thales,
+\item Safran,
+\item STX,
+\item SNCF,
+\item $\cdots$
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\subsection{Positionnement par rapport à la concurrence}
+\begin{frame}{\insertsection}
+
+\begin{block}{Matlab n'est pas un soft gratuit !}
+\begin{itemize}
+\item Licence de base: 2000 \euro,
+\item Simulink: +3000 \euro,
+\item Exemple de Toolbox: Control System (1000\euro), Signal Processing (1000\euro), Audio System Toolbox (1250\euro), Image Processing Toolbox (1000\euro), ...
+\end{itemize}
+\only<2>{
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{img/perenoel.jpg}
+\end{figure}
+Des tarifs préférentiels existent pour les étudiants et les universitaires.}
+\end{block}
+\only<3>{
+\begin{block}{Positionnement par rapport à la concurrence}
+\begin{itemize}
+\item Scilab ou Octave: Moins ergonomiques, communautés plus petites, etc.
+\item R: Environnement plutôt axé sur l'analyse statistique (moins à l'aise sur la partie traitement du signal, communication, automatique).
+\item Langages de programmation: Outils plutôt destinés aux programmeurs...sauf peut être 
+\end{itemize}
+\end{block}}
+\end{frame}
+
+
+\subsection{Matlab Vs Python}
+\begin{frame}{\insertsection}
+\begin{block}{\insertsubsection}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{img/vs_python.png}
+\caption{Le \href{https://fr.mathworks.com/products/matlab/matlab-vs-python.html}{point de vue} de Mathworks.}
+\end{figure}
+ \end{block}
+
+\end{frame}
+
+%
+%
+%
+%
+%
+%\begin{frame}[fragile]{\insertsubsection}
+%\begin{block}{Exemple}
+%\vskip -2em
+%\begin{figure}
+% \begin{minipage}[t]{0.45\textwidth}
+%   \lstinputlisting[language=C,title=Langage C,frame=single]{src/somme.c}
+%   \end{minipage}\hfill
+%  \begin{minipage}[t]{0.45\textwidth}
+%  \lstinputlisting[language=Python,title=Python,frame=single]{src/somme.py}
+%    \end{minipage}
+%\caption{Exemple: Somme d'une suite arithmétique ($S=0+1+\cdots+N$)}
+% \end{figure} 
+%  \vskip -1em
+%  \begin{itemize}
+%  \item Le Python est un langage plus concis et plus haut niveau que le langage C. Il permet de \alert{coder des applications plus rapidement}.
+%  \item Le C reste un langage nettement plus rapide à l'execution.
+%  \end{itemize}
+%  \end{block}
+  
+  
+\end{frame}
+
+
+
+\section{Tutorial Matlab}
+
+\begin{frame}[fragile]{\insertsection}
+\begin{block}{Interface}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{img/interface.png}
+\caption{Interface au lancement de Matlab.}
+\end{figure}
+\end{block}
+\end{frame}
+
+\subsection{Les structures de contrôles}
+\begin{frame}[fragile]{\insertsection}
+\begin{block}{\insertsubsection}
+\begin{itemize}
+\item Langage interprété: script Matlab (.m)
+\item Pas de déclaration de variables.
+\item L'absence d'un point virgule indique que le résultat d'une instruction doit être affiché dans la fenêtre de commande.
+\item {\color{red}\danger}: Après l'execution d'un script, les variables restent en mémoire 
+\begin{itemize}
+\item L'instruction \texttt{clear all} permet de vider l'espace mémoire.
+\end{itemize}
+\item {\color{red}\danger}: Le premier élément d'un tableau est indexé à 1 (et non 0).
+\item {\color{red}\danger}: Ne pas confondre:
+\begin{itemize}
+\item \texttt{a*b}: multiplication matricielle entre \texttt{a} et \texttt{b},
+\item \texttt{a.*b}: multiplication terme à terme entre \texttt{a} et \texttt{b}.
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{\insertsection}
+\begin{block}{\insertsubsection}
+\vskip -2em
+\begin{figure}
+ \begin{minipage}[t]{0.45\textwidth}
+   \lstinputlisting[language=Matlab,title=Test if,frame=single]{src/ex_test.m}
+   \end{minipage}\hfill
+  \begin{minipage}[t]{0.45\textwidth}
+   \lstinputlisting[language=Matlab,title=Test Multiple,frame=single]{src/ex_switch.m}
+    \end{minipage}
+     \begin{minipage}[t]{0.45\textwidth}
+   \lstinputlisting[language=Matlab,title=Boucle for,frame=single]{src/ex_for.m}
+   \end{minipage}\hfill
+  \begin{minipage}[t]{0.45\textwidth}
+  \lstinputlisting[language=Matlab,title=Boucle while,frame=single]{src/ex_while.m}
+    \end{minipage}
+ \end{figure} 
+ \end{block}
+\end{frame}
+
+\subsection{Affichage d'une sinusoide}
+\begin{frame}{\insertsection}
+\begin{block}{\insertsubsection}
+
+\begin{figure}
+  \begin{minipage}[b]{0.45\textwidth}
+  \lstinputlisting[language=Matlab,title=generation sinusoide,frame=single]{src/ex_programme.m}
+    \end{minipage}\hfill
+  \begin{minipage}[b]{0.45\textwidth}
+\includegraphics[width=1.\linewidth]{./img/fig.PNG}
+    \end{minipage}
+\caption{Exemple: Affichage de la sinusoide $x(t)=\sin(2\pi f_0 t)$ avec $f_0=5$ Hz }
+\end{figure}
+   \end{block}
+\end{frame}
+
+\subsection{Simulink}
+\begin{frame}{\insertsection}
+\begin{block}{\insertsubsection}
+ \begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{img/simulink.png}
+\caption{Interface Simulink.}
+\end{figure}
+ 
+  \end{block}
+
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{\insertsection}
+\begin{block}{Matlab, un outils pour les ingénieurs}
+\begin{itemize}
+\item Un environnement de développement intégré.
+\item Un large panel de fonctionnalités dans des domaines très différents.
+\begin{itemize}
+\item Traitement des signaux audios,
+\item Traitement des images,
+\item Communications numériques,
+\item Automatique continue et numérique,
+\item ....
+\end{itemize}
+\item Un langage avec une syntaxe simplifiée.
+\item Un outils de programmation graphique, Simulink.
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\vskip 10em
+\begin{center}{\usebeamercolor[fg]{structure} \huge Questions}
+\vskip 2em
+{\usebeamercolor[fg]{structure}\url{http://www.v-choqueuse.com}}
+
+\end{center}
+
+\end{frame}
+
+\end{document}

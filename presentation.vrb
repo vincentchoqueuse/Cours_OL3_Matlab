@@ -1,0 +1,18 @@
+\frametitle{\insertsection }
+\begin{block}{\insertsubsection}
+\vskip -2em
+\begin{figure}
+ \begin{minipage}[t]{0.45\textwidth}
+   \lstinputlisting[language=Matlab,title=Test if,frame=single]{src/ex_test.m}
+   \end{minipage}\hfill
+  \begin{minipage}[t]{0.45\textwidth}
+   \lstinputlisting[language=Matlab,title=Test Multiple,frame=single]{src/ex_switch.m}
+    \end{minipage}
+     \begin{minipage}[t]{0.45\textwidth}
+   \lstinputlisting[language=Matlab,title=Boucle for,frame=single]{src/ex_for.m}
+   \end{minipage}\hfill
+  \begin{minipage}[t]{0.45\textwidth}
+  \lstinputlisting[language=Matlab,title=Boucle while,frame=single]{src/ex_while.m}
+    \end{minipage}
+ \end{figure}
+ \end{block}
