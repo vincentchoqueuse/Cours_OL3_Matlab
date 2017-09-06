@@ -61,6 +61,7 @@
 \end{itemize}
 \end{block}
 
+\visible<2->{
 \begin{block}{Modalités de mise en \oe uvre}
 On utilisera des logiciels pour limiter les calculs très techniques de transformées afin de se concentrer sur la mise en place de raisonnements et l?interprétation des résultats.
 \end{block}
@@ -75,6 +76,7 @@ On utilisera des logiciels pour limiter les calculs très techniques de transform
 \includegraphics[height=0.18\linewidth]{img/matlab_ex4.jpg}
 \end{minipage}
 \end{figure}
+}
 \end{frame}
 
 \subsection{Travaux Pratiques}
@@ -88,6 +90,7 @@ On utilisera des logiciels pour limiter les calculs très techniques de transform
 \end{itemize}
 \end{block}
 
+\visible<2->{
 \begin{block}{Contenu des TPs}
 \begin{itemize}
 \item TP1: Automatique,
@@ -96,11 +99,12 @@ On utilisera des logiciels pour limiter les calculs très techniques de transform
 \item TP4: Echantillonnage (CAN/CNA),
 \item TP5: Filtrage numérique (Filtre RIF et RII).
 \end{itemize}
-\end{block}
+\end{block}}
 
+\visible<3->{
 \begin{block}{
 Les TPs seront réalisés sur .... Matlab !}
-\end{block}
+\end{block}}
 
 \end{frame}
 
@@ -251,27 +255,28 @@ Des tarifs préférentiels existent pour les étudiants et les universitaires.}
 \end{block}
 \end{frame}
 
-\subsection{Les structures de contrôles}
+\subsection{Spécificité du langage}
 \begin{frame}[fragile]{\insertsection}
 \begin{block}{\insertsubsection}
 \begin{itemize}
-\item Langage interprété: script Matlab (.m)
-\item Pas de déclaration de variables.
-\item L'absence d'un point virgule indique que le résultat d'une instruction doit être affiché dans la fenêtre de commande.
-\item {\color{red}\danger}: Après l'execution d'un script, les variables restent en mémoire 
+\item \visible<1->{Langage interprété: script Matlab (.m)}
+\item \visible<2->{Pas de déclaration de variables.}
+\item \visible<3->{L'absence d'un point virgule indique que le résultat d'une instruction doit être affiché dans la fenêtre de commande.}
+\item  \visible<4->{{\color{red}\danger}: Après l'execution d'un script, les variables restent en mémoire 
 \begin{itemize}
 \item L'instruction \texttt{clear all} permet de vider l'espace mémoire.
-\end{itemize}
-\item {\color{red}\danger}: Le premier élément d'un tableau est indexé à 1 (et non 0).
-\item {\color{red}\danger}: Ne pas confondre:
+\end{itemize}}
+\item  \visible<5->{{\color{red}\danger}: Le premier élément d'un tableau est indexé à 1 (et non 0).}
+\item  \visible<6->{{\color{red}\danger}: Ne pas confondre:
 \begin{itemize}
 \item \texttt{a*b}: multiplication matricielle entre \texttt{a} et \texttt{b},
 \item \texttt{a.*b}: multiplication terme à terme entre \texttt{a} et \texttt{b}.
-\end{itemize}
+\end{itemize}}
 \end{itemize}
 \end{block}
 \end{frame}
 
+\subsection{Les structures de contrôles}
 \begin{frame}[fragile]{\insertsection}
 \begin{block}{\insertsubsection}
 \vskip -2em
@@ -334,7 +339,7 @@ Des tarifs préférentiels existent pour les étudiants et les universitaires.}
 \item Automatique continue et numérique,
 \item ....
 \end{itemize}
-\item Un langage avec une syntaxe simplifiée.
+\item Un langage avec une syntaxe claire et concise.
 \item Un outils de programmation graphique, Simulink.
 \end{itemize}
 

@@ -1,13 +1,14 @@
 \beamer@endinputifotherversion {3.33pt}
 \beamer@sectionintoc {1}{Module OL3}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Description}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Travaux Pratiques}{4}{0}{1}
-\beamer@sectionintoc {2}{Introduction à Matlab}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{Utilisateurs de Matlab}{6}{0}{2}
-\beamer@subsectionintoc {2}{2}{Positionnement par rapport à la concurrence}{7}{0}{2}
-\beamer@subsectionintoc {2}{3}{Matlab Vs Python}{10}{0}{2}
-\beamer@sectionintoc {3}{Tutorial Matlab}{11}{0}{3}
-\beamer@subsectionintoc {3}{1}{Les structures de contrôles}{12}{0}{3}
-\beamer@subsectionintoc {3}{2}{Affichage d'une sinusoide}{14}{0}{3}
-\beamer@subsectionintoc {3}{3}{Simulink}{15}{0}{3}
-\beamer@sectionintoc {4}{Conclusion}{16}{0}{4}
+\beamer@subsectionintoc {1}{2}{Travaux Pratiques}{5}{0}{1}
+\beamer@sectionintoc {2}{Introduction à Matlab}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Utilisateurs de Matlab}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Positionnement par rapport à la concurrence}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Matlab Vs Python}{13}{0}{2}
+\beamer@sectionintoc {3}{Tutorial Matlab}{14}{0}{3}
+\beamer@subsectionintoc {3}{1}{Spécificité du langage}{15}{0}{3}
+\beamer@subsectionintoc {3}{2}{Les structures de contrôles}{21}{0}{3}
+\beamer@subsectionintoc {3}{3}{Affichage d'une sinusoide}{22}{0}{3}
+\beamer@subsectionintoc {3}{4}{Simulink}{23}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{24}{0}{4}
